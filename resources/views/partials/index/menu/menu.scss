@@ -1,0 +1,128 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+// football
+// hokey
+// basketball
+// box
+// valeyball
+// tenis
+// ufc
+
+.nav_menu {
+  border-bottom:2px solid #e7e7e7;
+  .nav{
+    &>ul{
+      display:flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width:100%;
+      li{
+        position:relative;
+        padding:18px 0;
+        &.current-menu-item{
+          a{
+            color:$color_active;
+          }
+        }
+        .sub-menu{
+          margin:0;
+          padding:0;
+          display:none;
+          width:300px;
+          background:#fff;
+          position:absolute;
+          top:100%;
+          left:0;
+          z-index: 999;
+          box-shadow: 0 0 15px 0 rgba(0, 0, 7, 0.11);
+          border-radius:0 0 10px 10px;
+          background-image: linear-gradient(to right, #f9f9f9, rgba(255, 255, 255, 0));
+          li{
+            margin-left:0;
+            display:block;
+            padding:0;
+            a{
+              display:block;
+              padding:7px 10px;
+              border-bottom: solid 1px #eaeaea;
+            }
+            &:last-child{
+              a{
+                border-bottom:none;
+              }
+            }
+          }
+        }
+        &:first-child{
+          margin-left:0;
+        }
+        a{
+          color:#333;
+          font-size:18px;
+          &:hover{
+            color:$color_active;
+          }
+        }
+        &:hover{
+          .sub-menu{
+            display:block;
+          }
+        }
+
+        &.football{
+          padding-left:25px;
+          background:url('./img/Football.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Football_hov.png') no-repeat left center;
+          }
+        }
+        &.hokey{
+          padding-left:25px;
+          background:url('./img/Hockey.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Hockey_hov.png') no-repeat left center;
+          }
+        }
+        &.basketball{
+          padding-left:25px;
+          background:url('./img/Basketball.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Basketball_hov.png') no-repeat left center;
+          }
+        }
+        &.tenis{
+          padding-left:25px;
+          background:url('./img/Tennis.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Tennis_hov.png') no-repeat left center;
+          }
+        }
+        &.valeyball{
+          padding-left:25px;
+          background:url('./img/Volleyball.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Volleyball_hov.png') no-repeat left center;
+          }
+        }
+        &.box{
+          padding-left:25px;
+          background:url('./img/Boxing.png') no-repeat left center;
+          &.current-menu-item{
+            background:url('./img/Boxing_hov.png') no-repeat left center;
+          }
+        }
+        &.ufc{
+          padding-left:35px;
+          background:url('./img/UFC.png') no-repeat left 47%;
+          &.current-menu-item{
+            background:url('./img/UFC_hov.png') no-repeat left 47%;
+          }
+        }
+      }
+    }
+  }
+  @include media-max(992){
+    display:none;
+  }
+}

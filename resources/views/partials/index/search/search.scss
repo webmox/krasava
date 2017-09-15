@@ -1,0 +1,131 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.hover_div{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+  display:none;
+  cursor:pointer;
+}
+.formasearch-block{
+  transition: 0.7s;
+  padding:70px 30px;
+  position:fixed;
+  top:-100%;
+  left:0;
+  width:100%;
+  height:auto;
+  z-index: 9999;
+  background:#f9f9f9;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 24px 0 rgba(255, 255, 255, 0.15);
+  opacity:0.9;
+  @include media-max(992){
+    padding:30px;
+  }
+  .serchBox{
+    font-size:42px;
+    //background:rgba(0, 0, 0, 0.5);
+    background:none;
+    border:none;
+    width:100%;
+    color:#000;
+    font-family:$bebas_neuebold;
+    line-height:normal;
+    border-bottom:1px solid #141414;
+    padding:10px;
+    @include media-max(992){
+      font-size:32px;
+    }
+  }
+}
+.resulp_search{
+  padding:0 0 20px 0;
+  .result_title{
+    font-family: $default_font;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.22;
+  }
+}
+.search-result{
+  .title-inforamtion{
+    .inforamtion{
+      &>span{
+        margin-left:0;
+        margin-right:15px;
+      }
+      @include media-max(768){
+        margin-top:6px;
+        justify-content: flex-start !important;
+      }
+    }
+  }
+}
+.search_nav .container{
+  @include media-max(992){
+    padding:10px 0;
+  }
+}
+
+.formasearch{
+  .search_form{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-max(480){
+      display:block;
+    }
+  }
+
+  .serchBox{
+    width:75%;
+    height:45px;
+    line-height:45px;
+    padding:0 20px;
+    border:1px solid #e9e9e9;
+    transition: 0.3s;
+    @include media-max(480){
+      width:100%;
+    }
+    &:focus{
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .searchsubmit{
+    margin-left:25px;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 60px;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    border: solid 1px #fff;
+    position: relative;
+    background:#333;
+    transition: 0.3s;
+    @include media-max(480){
+      width:100%;
+      margin:20px 0 0 0;
+    }
+    &:hover{
+      background:$red;
+      border:1px solid $yellow;
+    }
+  }
+}
+.resulp_search{
+  padding:0 0 20px 0;
+  .result_title{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.22;
+    margin-top:25px;
+  }
+}

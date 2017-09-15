@@ -1,0 +1,74 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.wrap_list_cats{
+  padding:30px 30px 20px 30px;
+  border-bottom:1px solid #141414;
+  .list_cats{
+    .item_cat{
+      display:block;
+      margin:0;
+      text-align:left;
+      @include media-max(1200){
+        padding:0 10px;
+      }
+      @include media-max(768){
+        text-align:center;
+      }
+      a{
+        display:block;
+        color:$yellow;
+        font-size:13px;
+        border-radius:17px;
+        padding: 1px 0 4px 0;
+        transition:0.3s;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &.current{
+        a{
+          color:#000;
+          background:$yellow;
+        }
+      }
+    }
+    .owl-nav{
+      position:absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      margin-top:0;
+      &>div{
+        overflow:hidden;
+        position:absolute;
+        text-indent:-999px;
+        width:20px;
+        height:30px;
+        margin:0;
+        top:0;
+        padding:0;
+        margin-top:-3px;
+        //background-color:$yellow_light;
+        background-color:transparent;
+        transition: 0.3s;
+        &.owl-prev{
+          background-image:url('img/arrow-left.png');
+          background-position: center center;
+          background-repeat:no-repeat;
+          left:-32px;
+        }
+        &.owl-next{
+          background-image:url('img/arrow-right.png');
+          background-position: center center;
+          background-repeat:no-repeat;
+          right:-32px;
+        }
+        &:hover{
+          background-color:rgba(220, 151, 8, 0.19);
+        }
+      }
+    }
+  }
+}

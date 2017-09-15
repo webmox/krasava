@@ -1,0 +1,31 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.inner_section {
+  .btn_red {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 30px;
+    color: $default_color;
+    font-family: $default_font;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 100px;
+    background: linear-gradient(#700,#f00);
+    position: relative;
+    transition: .3s;
+    &::after {
+      border-radius: 17px;
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: calc(100% - 4px);
+      height: 50%;
+      background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    }
+    &:hover {
+      background: linear-gradient(#f00,#f00);
+    }
+  }
+}

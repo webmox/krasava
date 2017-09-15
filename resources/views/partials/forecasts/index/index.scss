@@ -1,0 +1,198 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.prediction_item {
+  font-size: 17px;
+  padding: 25px;
+  background:#f9f9f9;
+  margin-bottom:25px;
+  line-height:normal;
+  border-radius:10px;
+  @include media-max(460){
+    margin-bottom:0;
+    padding:0;
+  }
+  @include media-max(1200){
+    font-size:15px;
+  }
+  @include media-max(768){
+    display:flex;
+    justify-content: space-between;
+  }
+  &>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom:20px;
+    position:relative;
+    &>div{
+      position:relative;
+      &:first-child{
+        padding-left:0;
+      }
+      &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        top:50%;
+        right:0;
+        margin-top:-15px;
+        width:1px;
+        height:30px;
+        background: #e9e9e9;
+        @include media-max(768){
+          content:none;
+        }
+      }
+      &:last-child{
+        &:before{
+          content:none;
+        }
+      }
+      @include media-max(768){
+        display:block;
+        width:100%;
+      }
+    }
+  }
+  .one_row{
+    .coef{
+      color:$green;
+      font-size:14px;
+      font-family: $futuramedium;
+      padding:0 5px;
+    }
+    @include media-max(768){
+      width:50%;
+      display:block;
+      text-align:center;
+      margin-bottom:0;
+    }
+  }
+  .two_row{
+    margin-bottom:0;
+    .coef{
+      color:$red;
+      font-size:14px;
+      font-family: $futuramedium;
+      padding:0 5px;
+    }
+    @include media-max(768){
+      width:50%;
+      display:block;
+      text-align:center;
+    }
+  }
+  .comand_info{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+      max-width:40px;
+      margin-right:10px;
+      height:auto;
+      @include media-max(768){
+        margin-right:0;
+      }
+    }
+    @include media-max(768){
+      display:block;
+    }
+    .thumb_img,
+    .thumb{
+      @include media-max(768){
+        display:block;
+        margin-bottom:10px;
+      }
+    }
+  }
+  .chemp_info{
+    a{
+      color:$default_color;
+    }
+    @include media-max(768){
+      margin:16px 0;
+    }
+  }
+  .bottons_blc{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-max(768){
+      text-align:center;
+      display:block;
+    }
+    .info_post,
+    .time{
+      font-size: 11px;
+      color: #626262;
+      @include media-max(768){
+        display:none;
+      }
+    }
+    .info_post{
+      font-size:14px;
+      .tx{
+        font-size:11px;
+      }
+    }
+    @include media-max(460){
+      margin-top:16px;
+      display:none;
+    }
+  }
+  .cell-left{
+    width:27%;
+    padding-right:20px;
+    @include media-max(768){
+      width:100%;
+      padding:0;
+    }
+  }
+  .cell-middle{
+    width:33%;
+    padding:0 20px;
+    @include media-max(768){
+      width:100%;
+      padding:0;
+      margin:16px 0;
+    }
+    @include media-max(460){
+      display:none;
+    }
+  }
+  .cell-right{
+    width:40%;
+    padding-left:20px;
+    @include media-max(768){
+      width:100%;
+      padding:0;
+    }
+  }
+}
+
+.prediction_item_wrap{
+  @include media-max(460){
+    width:100%;
+    background:#f9f9f9;
+    margin-bottom:25px;
+    border-radius:10px;
+    padding:15px;
+  }
+  .mob_btns{
+    padding-top:20px;
+    display:none;
+    a.btn_default{
+      display:block;
+      width:100% !important;
+      margin-top:10px;
+    }
+    @include media-max(460){
+      display:block;
+    }
+  }
+}
+
+
+
+

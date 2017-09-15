@@ -1,0 +1,178 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.bookmakers_list{
+  .bookmaker_item{
+    padding:15px 10px;
+    margin-bottom:30px;
+    background:#f9f9f9;
+    border-radius: 10px;
+     .bookmaker_header{
+       padding-bottom:5px;
+       display:flex;
+       justify-content: space-between;
+       .name_th,
+       .has_bonuses_th,
+       .raiting_th,
+       .info_th,
+       .btn_blc_th{
+         width:19%;
+         text-align:center;
+         font-size: 11px;
+         color: #626262;
+         padding:0 10px;
+         @include media-max(620){
+           width:25%;
+         }
+         @include media-max(520){
+           width:33%;
+         }
+       }
+       .info_th{
+         @include media-max(620){
+           display:none;
+         }
+       }
+       .raiting_th{
+         @include media-max(520){
+           display:none;
+         }
+       }
+       .btn_blc_th{
+         width:23%;
+         @include media-max(520){
+           width:33%;
+         }
+       }
+       @include media-max(420){
+         display:none;
+       }
+     }
+    .bookmaker_main{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      .name,
+      .has_bonuses,
+      .raiting,
+      .info,
+      .btn_blc{
+        width:19%;
+        text-align:center;
+        padding:10px;
+        position:relative;
+        &:after{
+          content:'';
+          display:block;
+          position:absolute;
+          top:50%;
+          left:0;
+          width:1px;
+          height:32px;
+          background:#e9e9e9;
+          margin-top:-16px;
+          @include media-max(420){
+            content:none;
+          }
+        }
+        @include media-max(620){
+          width:25%;
+        }
+        @include media-max(520){
+          width:33%;
+        }
+        @include media-max(420){
+          width:100%;
+        }
+      }
+      .info{
+        @include media-max(620){
+          display:none;
+        }
+      }
+      .raiting{
+        @include media-max(520){
+          display:none;
+        }
+      }
+      .btn_blc{
+        width:23%;
+        @include media-max(520){
+          width:33%;
+        }
+        @include media-max(420){
+          max-width:inherit;
+          width:100%;
+        }
+        .btn_default{
+          @include media-max(768){
+            width:100px;
+            @include media-max(420){
+              max-width:inherit;
+              width:100%;
+            }
+          }
+        }
+      }
+      .has_bonuses{
+        @include media-max(420){
+          display:none;
+        }
+      }
+      .name{
+        &:after{
+          content:none;
+        }
+      }
+      .thumbnail{
+        max-width:120px;
+        border-radius: 10px;
+        padding:7px;
+        background-color: #ffffff;
+        img{
+          max-width:100%;
+          height:auto;
+        }
+        @include media-max(420){
+          max-width:inherit;
+          width:100%;
+        }
+      }
+      @include media-max(420){
+        display:block;
+      }
+    }
+    .inforamtion{
+      display:flex;
+      justify-content: center;
+      color:#626262;
+      font-size:14px;
+      .comment,
+      .view{
+        margin-left:10px;
+        .tx{
+          font-size:11px;
+        }
+      }
+    }
+    .raiting{
+      font-size: 36px;
+      color: $green;
+      font-family:$futuraBT;
+    }
+    .bonuse_yes{
+      img{
+        max-width:32px;
+        height:auto;
+      }
+    }
+    .bonuse_not{
+      .minus{
+        width: 32px;
+        height: 7px;
+        background-color: #626262;
+        margin:0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+/* COLORS
+--------------------------------- */
+$default_color: #000007;
+$red: #c40000;
+$color_active: #d0011b;
+$yellow: #dc9708;
+$yellow_light: #dc9708;
+$green: #45c813;
+$purple: #2d0153;
+
+/* FONTS
+--------------------------------- */
+
+$bebas_neuebold: 'bebas_neuebold', sans-serif;
+$bebas_neueregular: 'bebas_neueregular', sans-serif;
+
+$default_font: 'HelveticaRegular', sans-serif;
+$futurabold: 'futurabold', sans-serif;
+$futuramedium: 'futuramedium', sans-serif;
+$futuraBT: 'futuraboldT', sans-serif;
+$lucida_granderegular: 'lucida_granderegular', sans-serif;
+$display_free_tfbregular: 'display_free_tfbregular', sans-serif;
+
+
+$robot: 'Roboto', sans-serif;
+
+/* ЦВЕТ ВЫДЕЛЕНИЯ
+--------------------------------- */
+::selection {
+  background: blue; /* Safari */
+  color: #fff;
+}
+
+::-moz-selection {
+  background: blue; /* Firefox */
+  color: #fff;
+}
+
+/* ЦВЕТ СКРОЛА
+--------------------------------- */
+//::-webkit-scrollbar{
+//  width: 8px;
+//  background-color: rgba(84, 84, 84, 0.13);
+//}
+//::-webkit-scrollbar-thumb{
+//  border-width:1px 1px 1px 2px;
+//  border-color: #123456;
+//  background-color: $red;
+//}
+
+/* CLASS COLOR
+--------------------------------- */
+.text-dark { color: #000; }
+.text-red { color: $red; }
+.text-white { color: #fff; }
+.text-green { color: $green; }
+
+/* BG CLASS COLOR
+--------------------------------- */
+.bg-dark { background-color: #000; }
+.bg-red { background-color: $red; }
+.bg-yellow {background-color: #dc9708;}
+.bg-purple {background-color: #2d0153;}
+

@@ -1,0 +1,80 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.bookmaker-single{
+  .bookmaker_header{
+    display:flex;
+    align-items: center;
+    padding:0 0 20px 0;
+    h1{
+      margin-top:0;
+      margin-bottom:0;
+      font-size:24px;
+      margin-right:20px;
+    }
+    .inforamtion{
+      padding-top:2px;
+      font-size:12px;
+      color:#8e8e8e;
+      &>span{
+        margin-right:20px;
+      }
+      .fa{
+        font-size:14px;
+      }
+    }
+  }
+  .bookmaker_description{
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+  .more_information_bookmaker{
+    margin-top:20px;
+    .table_style{
+      border:none !important;
+      @include media-max(520){
+        font-size:13px;
+      }
+      .tr_row{
+        background:#f9f9f9;
+        margin-bottom:10px;
+        border-radius:10px;
+        display:flex;
+        justify-content: flex-start;
+      }
+      .td_cell{
+        border:none;
+        padding:15px 13px 12px 12px;
+        @include media-max(360){
+          padding:15px 8px 12px 12px;
+        }
+        img{
+          @include media-max(1200){
+            margin-bottom:3px;
+          }
+        }
+        &:first-child{
+          width:25%;
+          @include media-max(480){
+            width:30%;
+          }
+        }
+        &:last-child{
+          width:75%;
+          @include media-max(480){
+            width:70%;
+          }
+        }
+      }
+    }
+  }
+  .links_bookmakers{
+    text-align:center;
+    .btn_default{
+      padding:0 50px;
+      width:auto;
+    }
+  }
+}

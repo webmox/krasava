@@ -1,0 +1,44 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.wrap-breadcrumbs {
+  box-shadow: inset -1px 11px 20px -10px rgba(0, 0, 0, 0.3);
+  background:#000;
+  .breadcrumbs{
+    padding-left:20px;
+    font-size:0;
+    &>span{
+      display:inline-block;
+      font-size:14px;
+      padding:10px;
+      transform: skewX(40deg);
+      border-left:2px solid rgba(255, 255, 255, 0.3);
+      color:#fff;
+      a{
+        color:#fff;
+      }
+      &>span,
+      &>a{
+        display:block;
+        transform: skewX(-40deg);
+      }
+      &:first-child{
+        border-left:none;
+      }
+    }
+    &>span[itemprop="itemListElement"]{
+      transition: 0.2s;
+      &:hover{
+        background:$red;
+      }
+    }
+    .current{
+      background:#fff;
+      color:$default_color !important;
+      box-shadow: inset -1px 11px 20px -10px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @include media-max(992){
+    display:none;
+  }
+}

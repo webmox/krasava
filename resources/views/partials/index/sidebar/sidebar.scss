@@ -1,0 +1,156 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+.widget {
+  margin-bottom: 30px;
+  padding-bottom:20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 7, 0.11);
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  color:#333;
+  .title-widget {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0  30px 12px 30px;
+    margin-top:12px;
+    border-bottom: 1px solid #e9e9e9;
+    @include media-max(1200) {
+      font-size: 16px;
+    }
+    &.has_icon {
+      padding-left: 50px;
+      position: relative;
+      @include media-max(1200) {
+        padding-left: 20px;
+      }
+      .title_icon {
+        width: 20px;
+        height: auto;
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        @include media-max(1200){
+          display:none;
+        }
+      }
+    }
+  }
+  .items_elements {
+    .item_el {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      padding:15px 20px 15px 20px;
+      border-bottom: 1px solid #e9e9e9;
+      .icon_el {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #fff;
+        margin-right: 15px;
+        @include media-max(1200) {
+          display: none;
+        }
+      }
+      .text {
+        color:#000007;
+        line-height:normal;
+        &:hover {
+          color: $color_active;
+        }
+      }
+    }
+  }
+  .btn_default {
+    padding: 0 25px;
+    @include media-max(1200) {
+      padding: 0 15px;
+      font-size: 18px;
+    }
+  }
+  &.banner {
+    padding: 0;
+    .banner-img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .carousel_widget {
+    position: relative;
+    .title-widget {
+      padding-right: 50px;
+    }
+    .owl-nav {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      margin-top: 0;
+      background:#f9f9f9;
+      width:60px;
+      padding-right:15px;
+      & > div {
+        overflow: hidden;
+        text-indent: -999px;
+        width: 8px;
+        height: 25px;
+        margin: 0 5px;
+        &.owl-prev {
+          background: url('img/arrow-left.png') no-repeat center center;
+        }
+        &.owl-next {
+          background: url('img/arrow-right.png') no-repeat center center;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  /*-----------------------------------------------------*/
+  .list-bookmakers {
+      .item_el {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e9e9e9;
+        margin: 0;
+        padding:12px 20px;
+        position: relative;
+        .thumbnail_block {
+          max-width: 130px;
+          margin-right: 5px;
+          img {
+            max-width: 90%;
+            height: auto;
+          }
+        }
+        .coef_num {
+          display: block;
+          padding: 0 0 0 8px;
+          font-size: 38px;
+          color: #45c813;
+          font-family: $futuraBT;
+          line-height: normal;
+          position: relative;
+        }
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background: #45c813;
+          transition: 0.5s;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+  }
+}

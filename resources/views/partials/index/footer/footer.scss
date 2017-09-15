@@ -1,0 +1,123 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+  background:#fff;
+  padding:23px 0 0 0;
+  border-top:1px solid #e7e7e7;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.content-info{
+  .container{
+    @include media-max(992) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  @include media-max(992){
+    padding:0 0 15px 0;
+  }
+}
+
+.main_footer{
+  padding:20px 0 0 0;
+  .right_footer{
+    text-align:center;
+    .logo {
+      margin-top:25px;
+      display:inline-block;
+      font-size: 25px;
+      color: #000;
+      font-family: $futurabold;
+      text-transform: uppercase;
+      span {
+        font-family: $futuramedium;
+      }
+    }
+    .social{
+      padding:20px 0;
+      text-align:center;
+      li{
+        display:inline-block;
+        margin:0 10px;
+        a{
+          display:block;
+          width:30px;
+          height:30px;
+          border:1px solid #000;
+          line-height:30px;
+          color:#000;
+          text-align:center;
+          border-radius:50%;
+          &:hover{
+            border:1px solid $color_active;
+            color:#fff;
+            background:$color_active;
+          }
+        }
+      }
+    }
+  }
+  .footer-widget{
+    margin-bottom:10px;
+    .menu{
+      margin:0;
+      padding:0;
+      li{
+        margin-bottom:5px;
+        a{
+          color:$default_color;
+          font-size: 18px;
+          transition:0.3s;
+          &:hover{
+            color:$color_active;
+          }
+        }
+      }
+    }
+  }
+  @include media-max(992){
+    display:none;
+  }
+}
+.copyright{
+  font-size:14px;
+  color: #313131;
+  text-align:right;
+  padding-right:40px;
+  a{
+    color: #313131;
+  }
+  @include media-max(992){
+    width:100%;
+    text-align:center;
+    padding:20px 0 0 0;
+    p{
+      margin:0;
+    }
+  }
+}

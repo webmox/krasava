@@ -1,0 +1,24 @@
+* {
+  outline: none !important;
+}
+
+a {
+  color: $color_active;
+  outline: none !important;
+  transition: 0.3s;
+  &:hover {
+    text-decoration: none;
+    color: $color_active;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none !important;
+  }
+  &:active {
+    outline: none !important;
+    color: $color_active;
+  }
+}
+input {
+  cursor: pointer;
+}

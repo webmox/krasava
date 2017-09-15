@@ -1,0 +1,42 @@
+@import "~scss/variables";
+@import "~scss/mixin";
+.error404{
+  background:url('img/bg-404.jpg') no-repeat center center;
+  background-size:cover;
+  font-family: 'Abril Fatface', cursive;
+  overflow:hidden;
+  .main-block{
+    padding-top:200px;
+    font-size:200px;
+    text-align:center;
+    text-transform: uppercase;
+    @include media-max(992){
+      font-size:150px;
+      padding-top:140px;
+    }
+    @include media-max(768){
+      font-size:80px;
+    }
+    @include media-max(480){
+      font-size:72px;
+    }
+    .go-back{
+      border-radius:100px;
+      border:2px solid #fff;
+      font-size:28px;
+      display:inline-block;
+      color:#fff;
+      font-family:Arial, sans-serif;
+      padding:10px 45px;
+      font-weight:bold;
+      &:hover{
+        background:#ffbd33;
+        border:2px solid #ffbd33;
+      }
+      @include media-max(480){
+        font-size:20px;
+        margin-top:25px;
+      }
+    }
+  }
+}
